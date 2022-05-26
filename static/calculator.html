@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <link href="static/styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>CSIE 計算機</h1>
+        <img src="static/calc_icon.png" width="120px" height="120px" />
+    </header>
+    <main class="main-container">
+        <form id="calc-form" class="calc-form">
+            <div>
+                <label for="expression" class="calc-exp-lbl">請輸入數學表達式: </label>
+                <input id="expression" class="calc-exp-input" type="text" name="expression">
+                <button class="calc-sub-btn" type="submit" name="calculate">=</button>
+            </div>
+        </form>
+        <p class="ans-lbl">Answer: <span id="ans-txt" class="ans-txt"></span></p>
+
+    </main>
+
+    <script src="static/index.js"></script>
+</body>
+
+</html>
