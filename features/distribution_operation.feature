@@ -5,13 +5,11 @@ Feature: Distributive operations
   I want to do arithmetic operations
 
   Scenario: satisfy commutative property1
-    When I enter "2 * (1 + 3)" first
-    And I enter "(2 * 1) + (2 * 3)" again
+    When I enter <expression1> first
+    And I enter <expression2> again
     Then I get the same answer
-
-  Scenario: satisfy commutative property2
-    When I enter "(1 + 3) * 2" first
-    And I enter "(1 * 2) + (3 * 2)" again
-    Then I get the same answer
-
+    Examples:
+    | expression1 | expression2   |
+    | 2 * (1 + 3) | (2*1) + (2*3) |
+    | (1 + 3) * 2 | (1*2) + (3*2) |
   

@@ -1,41 +1,13 @@
-# -- FILE: features/example.feature
-Feature: Simple operations
-  As a student of primary school
-  In order to finish my homework
-  I want to do arithmetic operations
+Scenario Outline: do simple operations
+  Given I enter <expression>
 
-  Scenario: Do 2 + 3 mathematical calculation
-    Given I enter "2 + 3"
-
-    When I press "=" button
-    Then I get the answer "5"
-
-  Scenario: Do 3 - 2 mathematical calculation
-    Given I enter "3 - 2"
-
-    When I press "=" button
-    Then I get the answer "1"
-
-  Scenario: Do 3 * 2 mathematical calculation
-    Given I enter "3 * 2"
-
-    When I press "=" button
-    Then I get the answer "6"
-
-  Scenario: Do 3 / 2 mathematical calculation
-    Given I enter "3 / 2"
-
-    When I press "=" button
-    Then I get the answer "1.5"
-
-  Scenario: Do 3 +-*/ 2 mathematical calculation
-    Given I enter "3 +-*/ 2"
-
-    When I press "=" button
-    Then I get the answer "Invalid Input"
-
-  Scenario: Do hello world mathematical calculation
-    Given I enter "hello world"
-
-    When I press "=" button
-    Then I get the answer "Invalid Input"
+  When I press "=" button
+  Then I get the answer <answer>
+  Examples:
+  | expression   | answer        |
+  | 3 + 2        | 5             |
+  | 3 - 2        | 1             |
+  | 3 * 2        | 6             |
+  | 3 / 2        | 1.5           |
+  | 3 +-*/ 2     | Invalid Input |
+  | hello world  | Invalid Input |

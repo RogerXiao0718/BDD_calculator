@@ -11,16 +11,3 @@ def calculator(expression):
         return eval(filtered_expression)
     except Exception as e:
         return "Invalid Input"
-
-def calculator_app():
-    isAgreeToCalculate = False
-    while not isAgreeToCalculate:
-        expression = input("Please enter the expression you want to calculate: ")
-        calculateDesireCheckInput = input("Please enter '=' to continue calculation: ")
-        isAgreeToCalculate = True if calculateDesireCheckInput == '=' else False
-    result = calculator(expression)
-    print(result)
-
-
-if __name__ == '__main__':
-    calculator_app()
